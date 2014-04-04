@@ -6,9 +6,9 @@ import java.util.HashSet;
 
 public class Node {
 
-	String name;
-	int val;
-	int team;
+	public String name;
+	public int val;
+	public int team;
 	HashSet<Node> neighbours = new HashSet<Node>();
 	
 	public Node() {
@@ -24,6 +24,9 @@ public class Node {
 	public void getNodeInfo(){
 		System.out.println("Name: "+name+" Value: "+val+" Team: "+team);
 		System.out.println("Neighbours: ");
+		for(Node n: neighbours){
+			System.out.println(n.name);
+		}
 		
 	}
 
